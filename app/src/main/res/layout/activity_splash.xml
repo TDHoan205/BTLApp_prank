@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    android:orientation="vertical">
+
+    <!-- Background Glow xoay -->
+    <ImageView
+        android:id="@+id/imgBackgroundCircle"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:alpha="0.2"
+        android:rotation="0"
+        android:animation="@anim/rotate"/>
+
+    <!-- Logo / Icon vui nhộn -->
+    <LinearLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:animation="@anim/bounce_in">
+
+        <!-- Hình nổ troll -->
+        <ImageView
+            android:id="@+id/imgBoom"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:src="@drawable/image_removebg_preview"
+            android:scaleType="fitCenter"
+            android:contentDescription="Logo troll"
+            android:animation="@anim/rotate"/>
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🤣 FUNNY SOUND 🤣"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:shadowColor="#6A1B9A"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="8"
+            android:layout_marginTop="-40dp"
+
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:animation="@anim/glow_pulse"/>
+
+    </LinearLayout>
+
+    <!-- Progress bar loading troll -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:indeterminateTint="#FF4081"
+        android:indeterminateTintMode="src_in" />
+
+    <!-- Chữ hướng dẫn troll -->
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎵 Chuẩn bị trải nghiệm âm thanh troll bá đạo!"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:shadowColor="#6A1B9A"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:animation="@anim/fade_in"/>
+</RelativeLayout>

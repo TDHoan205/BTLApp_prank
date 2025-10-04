@@ -1,0 +1,19 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Màu nền glow -->
+    <solid android:color="#80FF4081"/> <!-- #80 = độ trong suốt -->
+
+    <!-- Viền glow mờ -->
+    <stroke
+        android:width="4dp"
+        android:color="#40FF4081" />
+
+    <!-- Bóng phát sáng -->
+    <corners android:radius="150dp" />
+    <padding
+        android:left="10dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp" />
+</shape>

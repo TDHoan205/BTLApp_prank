@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@layout/activity_wave_header_bg"
+    android:padding="16dp">
+
+    <!-- Avatar vui nhộn -->
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/image_removebg_preview"
+        android:contentDescription="Avatar troll"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_circle_white2"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Tên người dùng -->
+<!--    <TextView-->
+<!--        android:id="@+id/username"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Xin chào, Troller 😜"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:shadowColor="#000000"-->
+<!--        android:shadowDx="2"-->
+<!--        android:shadowDy="2"-->
+<!--        android:shadowRadius="3"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        app:layout_constraintStart_toEndOf="@id/avatar"-->
+<!--        app:layout_constraintTop_toTopOf="@id/avatar"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
+
+<!--    &lt;!&ndash; Thông tin phụ &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/userStatus"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="🎉 Sẵn sàng troll cả thế giới!"-->
+<!--        android:textColor="#FFF9C4"-->
+<!--        android:textSize="14sp"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        app:layout_constraintStart_toEndOf="@id/avatar"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/username"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

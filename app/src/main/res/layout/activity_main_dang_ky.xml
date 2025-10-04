@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_fun_gradient"
+    tools:context="UI.MainDangKy">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="#FDF9E6"
+            android:padding="24dp">
+
+            <!-- Nút Back -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="start"
+                android:background="@drawable/bg_circle_white"
+                android:src="@drawable/outicon3"
+                android:scaleType="fitCenter"
+                android:contentDescription="Back" />
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/imgLogoDK"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/image_removebg_preview"
+                android:padding="8dp"
+                android:contentDescription="App Logo" />
+
+            <!-- Tiêu đề -->
+            <TextView
+                android:id="@+id/tvTitleDK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="casual"
+                android:text="✨ Create your Account ✨"
+                android:textAlignment="center"
+                android:textColor="#3F51B5"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <!-- Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="📧 Email"
+                app:boxStrokeColor="#3F51B5"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailDK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:background="@drawable/edittext_bg"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="🔒 Password"
+                android:layout_marginTop="12dp"
+                app:boxStrokeColor="#3F51B5"
+                app:boxBackgroundColor="#FFFFFF"
+                app:endIconMode="password_toggle"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPasswordDK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:background="@drawable/edittext_bg"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Confirm Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="✅ Confirm Password"
+                android:layout_marginTop="12dp"
+                app:boxStrokeColor="#3F51B5"
+                app:boxBackgroundColor="#FFFFFF"
+                app:endIconMode="password_toggle"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtConfirmPasswordDK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:background="@drawable/edittext_bg"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nút Sign Up -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:text="🎉 Sign Up"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                android:backgroundTint="#FF7043" />
+
+            <!-- Or -->
+            <TextView
+                android:id="@+id/tvOrDK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="────  Or sign up with  ────"
+                android:textAlignment="center"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Social login -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:weightSum="3">
+
+                <ImageButton
+                    android:id="@+id/btnX"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/x_logo_png11"/>
+
+                <ImageButton
+                    android:id="@+id/btnFacebook"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/facebook_logo__2019_"/>
+
+                <ImageButton
+                    android:id="@+id/btnGmail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/gmail1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

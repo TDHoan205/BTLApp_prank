@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Nội dung chính -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#FFF8DC">
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#FFB74D"
+                android:elevation="6dp"
+                android:title="📊 Thống Kê Troll Troll"
+                android:titleTextColor="#FFFFFF"
+                android:titleMarginStart="16dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+            <!-- ScrollView chứa nội dung -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:padding="12dp"
+                android:paddingBottom="80dp"> <!-- tránh che nội dung -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Tiêu đề thống kê -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📊 Thống kê số lượng troll 😜"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#FF7043"
+                        android:layout_gravity="center"
+                        android:paddingBottom="12dp"/>
+
+                    <!-- Thống kê nhanh -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12dp"
+                        android:weightSum="2">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="8dp"
+                            app:cardBackgroundColor="#FFF3E0">
+
+                            <Button
+                                android:id="@+id/btnSummaryUsers"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#FFCA28"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="👤 Người dùng: 0"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="12dp"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="8dp"
+                            app:cardBackgroundColor="#FFF3E0">
+
+                            <Button
+                                android:id="@+id/btnSummarySounds"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#4CAF50"
+                                android:gravity="center"
+                                android:padding="16dp"
+                                android:text="🎵 Âm thanh: 0"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:cornerRadius="12dp"/>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <!-- Chú thích -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ℹ️ Nhấn vào các mục trên để xem chi tiết"
+                        android:textSize="12sp"
+                        android:textColor="#555555"
+                        android:gravity="center"
+                        android:paddingBottom="16dp"/>
+
+                    <!-- Bộ lọc thời gian troll -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⏱️ Bộ lọc thời gian"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#FF7043"
+                        android:paddingBottom="8dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingBottom="12dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Từ ngày 📅"/>
+
+                            <Button
+                                android:id="@+id/btnFromDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chọn"
+                                android:backgroundTint="#FFCA28"
+                                android:textColor="#FFFFFF"
+                                app:cornerRadius="8dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Đến ngày 📅"/>
+
+                            <Button
+                                android:id="@+id/btnToDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chọn"
+                                android:backgroundTint="#FFCA28"
+                                android:textColor="#FFFFFF"
+                                app:cornerRadius="8dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lọc 🔍"/>
+
+                            <Button
+                                android:id="@+id/btnFilter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Thực hiện"
+                                android:backgroundTint="#FF7043"
+                                android:textColor="#FFFFFF"
+                                app:cornerRadius="8dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Chọn biểu đồ -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📈 Chọn biểu đồ"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#FF7043"
+                        android:paddingBottom="8dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinnerChartType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"/>
+
+                    <!-- Khu vực hiển thị biểu đồ -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="12dp">
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/lineChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"/>
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/barChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"/>
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/pieChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"/>
+                    </FrameLayout>
+
+                    <!-- Footer troll -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📢 Thống kê cực troll 😜"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:gravity="center"
+                        android:paddingTop="16dp"
+                        android:textColor="#FF4081"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/activity_wave_header" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Nội dung chính -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#FFF8DC">
+
+            <!-- Toolbar -->
+
+            <!-- Scrollable Content -->
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#FFB74D"
+                android:elevation="6dp"
+                app:title="⚙️ Cài đặt Troll 😂"
+
+                app:titleTextColor="@android:color/white" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Card Switch -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:strokeColor="#FF9800"
+                        app:strokeWidth="2dp"
+                        android:backgroundTint="#FFF59D">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switch_sound"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="🔊 Âm thanh siêu troll"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:paddingVertical="8dp"/>
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switch_notification"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:text="🔔 Thông báo chọc cười"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:paddingVertical="8dp"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Card Theme -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:strokeColor="#4CAF50"
+                        app:strokeWidth="2dp"
+                        android:backgroundTint="#DCEDC8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="🎨 Chọn theme của bạn"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#212121"
+                                android:paddingBottom="8dp"/>
+
+                            <RadioGroup
+                                android:id="@+id/radioGroup_theme"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.radiobutton.MaterialRadioButton
+                                    android:id="@+id/rb_light"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="☀️ Sáng cho tươi tỉnh"
+                                    android:textSize="15sp"
+                                    android:paddingVertical="6dp"/>
+
+                                <com.google.android.material.radiobutton.MaterialRadioButton
+                                    android:id="@+id/rb_dark"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="🌙 Tối cho ngầu lòi"
+                                    android:textSize="15sp"
+                                    android:paddingVertical="6dp"/>
+
+                                <com.google.android.material.radiobutton.MaterialRadioButton
+                                    android:id="@+id/rb_system"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="⚡ Auto theo hệ thống"
+                                    android:textSize="15sp"
+                                    android:paddingVertical="6dp"/>
+                            </RadioGroup>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Card Account & Security -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:strokeColor="#FF5722"
+                        app:strokeWidth="2dp"
+                        android:backgroundTint="#FFCCBC">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="👤 Tài khoản &amp; Bảo mật"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:paddingBottom="8dp"
+                                android:textColor="#000"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tv_current_user"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="📧 Đang đăng nhập: user@example.com"
+                                android:textSize="15sp"
+                                android:paddingBottom="8dp"
+                                android:textColor="#424242"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_change_password"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🔑 Đổi mật khẩu"
+                                app:cornerRadius="16dp"
+                                app:backgroundTint="#FF7043"
+                                android:textColor="#FFF"
+                                android:layout_marginBottom="8dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_logout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🚪 Đăng xuất"
+                                app:cornerRadius="16dp"
+                                app:backgroundTint="#F44336"
+                                android:textColor="#FFF"
+                                android:layout_marginBottom="8dp"/>
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switch_biometric"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:text="🔒 Dùng vân tay/khuôn mặt để đăng nhập"
+                                android:textSize="15sp"
+                                android:paddingVertical="6dp"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Card Notifications -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:strokeColor="#03A9F4"
+                        app:strokeWidth="2dp"
+                        android:backgroundTint="#B3E5FC">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="📢 Thông báo &amp; Tương tác"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:paddingBottom="8dp"
+                                android:textColor="#000"/>
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switch_daily_meme"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="false"
+                                android:text="😂 Meme troll hằng ngày"
+                                android:textSize="16sp"
+                                android:paddingVertical="6dp"/>
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switch_vibrate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="📳 Rung khi troll"
+                                android:textSize="16sp"
+                                android:paddingVertical="6dp"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Card About -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="8dp"
+                        app:strokeColor="#9C27B0"
+                        app:strokeWidth="2dp"
+                        android:backgroundTint="#E1BEE7">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="ℹ️ Thông tin &amp; Góp ý"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:paddingBottom="8dp"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tv_version"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="📱 Phiên bản: 1.0"
+                                android:textSize="15sp"
+                                android:paddingVertical="6dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_feedback"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="✉️ Gửi góp ý"
+                                app:cornerRadius="16dp"
+                                app:backgroundTint="#AB47BC"
+                                android:textColor="#FFF"/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_settings"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/activity_wave_header" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

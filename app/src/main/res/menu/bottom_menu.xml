@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/homeico1"
+        android:title="Home" />
+    <item
+        android:id="@+id/action_play"
+        android:icon="@drawable/play"
+        android:title="Chủ đề"
+        />
+    <item
+        android:id="@+id/action_sound"
+        android:icon="@drawable/speaeker"
+        android:title="Âm thanh"
+         />
+    <item
+        android:id="@+id/action_setting"
+        android:icon="@drawable/pugsetting"
+        android:title="Setting" />
+    </menu>

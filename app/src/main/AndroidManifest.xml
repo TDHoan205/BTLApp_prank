@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Quyền cần cho Android 10 trở lên để đọc file nhạc/ảnh -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BTLApp_prank">
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.MainActivity"
+            android:exported="false" /> <!-- Splash screen (màn hình khởi động) -->
+        <activity
+            android:name=".UI.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Các Activity khác -->
+        <activity
+            android:name=".UI.MainActivitylogin"
+            android:exported="false" />
+        <activity
+            android:name=".UI.MainActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".UI.MainDangKy"
+            android:exported="false" />
+        <activity
+            android:name=".UI.MainSound"
+            android:exported="false" />
+        <activity
+            android:name=".UI.MainActivityListView"
+            android:exported="false" />
+        <activity
+            android:name=".UI.BottomNavigation"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Statistics"
+            android:exported="false" />
+        <activity
+            android:name=".UI.About"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Settings"
+            android:exported="false" />
+        <activity
+            android:name=".UI.EnterCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AddSoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.AddButtonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.SoundDetailActivity"
+            android:exported="false" /> <!-- Nếu wave_header_bg và wave_header là Activity thì để lại -->
+        <activity
+            android:name=".UI.wave_header_bg"
+            android:exported="false" />
+        <activity
+            android:name=".UI.wave_header"
+            android:exported="false" />
+    </application>
+
+</manifest>

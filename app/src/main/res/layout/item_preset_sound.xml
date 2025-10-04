@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_sound_troll"
+    android:descendantFocusability="blocksDescendants"
+    android:elevation="4dp"
+    android:layout_margin="6dp"
+    android:clipToPadding="false">
+
+    <!-- Hình thumbnail + nút Play -->
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/ivSong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:background="@drawable/bg_circle_white"
+            android:padding="4dp"
+            android:contentDescription="Album thumbnail" />
+
+        <ImageButton
+            android:id="@+id/btnPlayPause"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle_play"
+            android:src="@drawable/play"
+            android:contentDescription="Play/Pause"
+            />
+    </FrameLayout>
+
+    <!-- Tiêu đề bài hát -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🤣 Troll Song"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FF7043"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Tên nghệ sĩ -->
+    <TextView
+        android:id="@+id/tvArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist Troll"
+        android:textSize="12sp"
+        android:textColor="#555555"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+    <!-- Lượt phát -->
+    <TextView
+        android:id="@+id/tvPlayCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="👂 Lượt phát: 0"
+        android:textSize="11sp"
+        android:textColor="#888888"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="2dp" />
+</LinearLayout>

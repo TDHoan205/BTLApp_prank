@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Nội dung chính -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FDF9E6">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_about"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFB74D"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:title="Giới Thiệu"
+            android:backgroundTint="#FFB74D"
+            android:titleTextColor="#FFFFFF"
+            android:elevation="4dp"/>
+
+        <!-- Nội dung About -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Logo tròn troll -->
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="20dp"
+                    android:src="@drawable/image_removebg_preview"
+                    android:contentDescription="Funny Logo" />
+
+                <!-- App name vui nhộn -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😂 Prank Sounds 😂"
+                    android:textSize="22sp"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:textColor="#E53935"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Version kiểu troll -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phiên bản 1.0.0 (Ổn… hay không thì hên xui 🤣)"
+                    android:textSize="14sp"
+                    android:fontFamily="casual"
+                    android:textColor="#666666"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Mô tả troll -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ứng dụng chuyên để troll bạn bè bằng âm thanh bá đạo.\n\nTính năng:\n🔥 Phát âm thanh siêu lầy\n🎭 Danh sách prank đa dạng\n🛠️ Thêm/Sửa/Xóa tùy ý (cho vui thôi 😎)\n🎨 Giao diện vui nhộn khỏi chê!"
+                    android:textSize="15sp"
+                    android:textStyle="italic"
+                    android:textColor="#444444"
+                    android:lineSpacingExtra="6dp"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- Contact kiểu vui -->
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📩 Liên hệ: support@pranksounds.com\n(đừng gửi spam, team sợ lắm 🤡)"
+                    android:textSize="14sp"
+                    android:textColor="#1E88E5"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ===== Bottom Navigation ===== -->
+<!--        <include-->
+<!--            android:id="@+id/bottom_navigation"-->
+<!--            layout="@layout/activity_bottom_navigation"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"/>-->
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottom_navigation"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="66dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:background="#FFFFFF"-->
+<!--            app:menu="@menu/bottom_menu"-->
+<!--            app:itemIconTint="@color/black"-->
+<!--            app:itemTextColor="@color/black"/>-->
+    </LinearLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_about"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/activity_wave_header"/>
+</androidx.drawerlayout.widget.DrawerLayout>

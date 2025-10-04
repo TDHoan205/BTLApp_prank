@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_fun_gradient"
+    tools:context=".UI.MainActivitylogin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="#FDF9E6"
+            android:padding="24dp">
+
+            <!-- Logo bo tròn + viền vui nhộn -->
+            <ImageView
+                android:id="@+id/imgLogoDN"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="32dp"
+                android:padding="16dp"
+                android:src="@drawable/image_removebg_preview"
+                android:contentDescription="App Logo" />
+
+            <!-- Tiêu đề có emoji -->
+            <TextView
+                android:id="@+id/tvTitleDN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="casual"
+                android:text="😂🎶 Let's Prank and Login 🎉"
+                android:textAlignment="center"
+                android:textColor="#FF4081"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <!-- Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="📧 Enter Email"
+                app:boxStrokeColor="#FF9800"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusBottomEnd="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailDN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:background="@drawable/edittext_bg"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="🔒 Enter Password"
+                android:layout_marginTop="12dp"
+                app:boxStrokeColor="#9C27B0"
+                app:boxBackgroundColor="#FFFFFF"
+                app:endIconMode="password_toggle"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusBottomEnd="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPasswordDN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888"
+                    android:background="@drawable/edittext_bg"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Nút Sign In -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="24dp"
+                android:text="🚀 Boom! Sign In"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:iconGravity="textStart"
+                android:backgroundTint="#FF7043"
+                app:iconTint="@android:color/white"/>
+
+            <!-- Or -->
+            <TextView
+                android:id="@+id/tvOrDN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="✨ Or sign in with ✨"
+                android:textAlignment="center"
+                android:textColor="#666666"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Social login -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:weightSum="3">
+
+                <ImageButton
+                    android:id="@+id/btnX"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/x_logo_png11"/>
+
+                <ImageButton
+                    android:id="@+id/btnFacebook"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/facebook_logo__2019_"/>
+
+                <ImageButton
+                    android:id="@+id/btnGmail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_circle_white"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/gmail1"/>
+            </LinearLayout>
+
+            <!-- Sign up -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😎 No account yet?"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/btnGoToSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="✨ Sign Up Now!"
+                    android:textColor="#3F51B5"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
